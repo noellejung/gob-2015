@@ -6,8 +6,12 @@ For those on Windows boxes, try [GitBash](https://git-for-windows.github.io/) as
 ## Your Ubuntu Environments / Local VMs
 Each team has four Ubuntu EC2 instances. Alternatively, you're free to work using a local VirtualBox VM running Ubuntu (14.04 on our EC2s). You can get an Ubuntu .iso [here](http://www.ubuntu.com/download) and VirtualBox [here.](https://www.virtualbox.org/wiki/Downloads)
 
-- To access your machine, use the certificate you received to SSH into the machine's public IP.
-- Your DevOps solution may require your machines to talk to one another. Use each machine's private IP when referencing your team's other machines.
+- To access your machine, use the certificate you received to SSH into the machine's public IP. A list will be emailed to your team.
+- Your DevOps solution may require your machines to talk to one another. Use each machine's private IP when referencing your team's other machines. To find your private IP, log into your machine and:
+```shell
+hostname
+```
+If your hostname is ip-123-45-67-89, then your private IP is 123.45.67.89.
 
 ### Example EC2 session:
 ```shell
@@ -16,21 +20,6 @@ chmod 0400 HackTeamX.pem
 # in terminal/GitBash first. You'll only need to do this once.
 ssh -i HackTeamX.pem ubuntu@[public_ip]
 ```
-
-| Team 1 Public IPs      | Team 1 Private IPs       | Team 2 Public IPs      | Team 2 Private IPs       |
-| :--------------------: |:------------------------:| :--------------------: |:------------------------:|
-| 52.3.255.190           | 172.31.92.6      | 54.88.214.150          | 172.31.93.14      |
-| 54.173.67.218          | 172.31.92.7      | 54.88.46.237           | 172.31.93.13      |
-| 54.173.83.29           | 172.31.92.8      | 54.84.133.37           | 172.31.93.12      |
-| 54.152.236.182         | 172.31.92.9      | 54.88.116.150          | 172.31.93.11      |
-
-
-| Team 3 Public IPs      | Team 3 Private IPs       | 
-| :--------------------: |:------------------------:|
-| 54.175.37.207          | 172.31.93.25     | 
-| 54.164.203.21          | 172.31.93.26      |
-| 54.173.171.137          | 172.31.93.27     |
-| 54.175.99.87        | 172.31.93.28    |
 
 ## Duplicating Repo  
 You will need [Git][git] to make a duplicate of this repository. 

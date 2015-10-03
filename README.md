@@ -15,7 +15,7 @@ First get the Docker image ID:
 
 Next run the Docker container processes:
 
-`docker run -t -i <IMAGE ID>`
+`docker run -t -i -p 49160:8000 <IMAGE ID>`
 
 ## 3. Use the app
 First get the IP address of the Docker host:

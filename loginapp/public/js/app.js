@@ -78,7 +78,38 @@ app.config(function ($stateProvider, $urlRouterProvider){
 		url: '/profile',
 		templateUrl: 'main.profile.html',
 		controller: function($scope, $http){
-			
+		$scope.userinfo =
+                       [
+                               {
+                               name: 'John Doe',
+                               talentNo: '9',
+                               firmFit: '8',
+                               decision: 'Yes',
+                               skills: ['iOS','Android', 'Java']
+                               },
+                               {
+                               name: 'Chris',
+                               talentNo: '7',
+                               firmFit: '3',
+                               decision: 'No',
+                               skills: ['.NET', 'c#', 'Mobile Developer']
+                               },
+                               {
+                               name: 'James Pratt',
+                               talentNo: '8',
+                               firmFit: '8',
+                               decision: 'Yes',
+                               skills: ['Web Application Developer', 'AngularJS', 'NodeJs']
+                               },
+                               {
+                               name: 'Stephen Jones',
+                               talentNo: '10',
+                               firmFit: '6',
+                               decision: 'Yes',
+                               skills: ['SOAP', 'REST Api', 'Mean Stack Developer', 'Java J2EE']
+                               }
+
+                       ]
 		}
 	})
 
